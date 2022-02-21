@@ -1,22 +1,23 @@
-# BlockchainJS
+Install:
 
-This project is an implementation of the essence of a Blockchain. It demonstrates the main aspects and the challenge of a Blockchain as a distributed ledger.
+install npm and node
+sudo apt-get install nodejs
+brew install nodejs(not sure if that's correct on macOS)
+git clone repo
+cd repo
+npm install
+node index.js
 
-```
-BlockchainJS  
-    |-- consensus/
-        |-- proof-of-authority.js
-        |-- proof-of-stake.js
-        |-- proof-of-work.js
-    |-- src/
-        |-- Block.js
-        |-- Blockchain.js
-        |-- Participants.js
-        |-- Transaction.js
-    |-- example-poa.js
-    |-- example-pos.js
-    |-- example-pow.js
-```
+The various models are available via web routes
+
+localhost:3000/pow
+/poa
+/pos
+
+Output is on the shell window.
+
+
+
 
 ## What is a Blockchain?
 
@@ -60,31 +61,21 @@ The best known implementations of a blockchain are in the form of a **distribute
 
 This project implements the main three consensus algorithms.
 
-```shell
-# Install dependencies
-npm install
-```
+
 
 ### Proof of Work
 
 The main aspect is that in order to create a new block, a mathmatical problem must be solved by calculating a specific number of zeros in the beginning of a hash value. Run the sample script with the difficulty of 2. You can see that it might be fast. By increasing the difficulty the calculation takes longer.
 
-```shell
-node example-pow.js
-```
+
 
 ### Proof of Stake
 
 In a PoS-based networks, the creator of the next block is chosen via various combinations of random selection and wealth or age. To become a validator, you have to deposit a fee. If a validator abuses its position, it will lose its stake.
 
-```shell
-node example-pos.js
-```
+
 
 ### Proof of Authority
 
 In PoA-based networks, transactions and blocks are validated by approved participants, known as validators. Other than in PoW or PoS, the validator puts its reputation on the line.
 
-```shell
-node example-poa.js
-```
